@@ -1,7 +1,8 @@
 import dotenv from "dotenv";
 import express, { Express } from "express";
 
-import setupDevEnvironment from "./development";
+import configureDevelopment from "./development";
+import configureProduction from "./production";
 import setupTemplateEngine from "./setupTemplateEngine";
 
 export default (app: Express) => {
@@ -9,8 +10,9 @@ export default (app: Express) => {
   app.use(express.static("public"));
 
   if (process.env.NODE_ENV === "development") {
-    setupDevEnvironment(app);
+    configureDevelopment(app);
   } else if (process.env.NODE_ENV === "production") {
+    configureProduction(app);
   }
   
   setupTemplateEngine(app);

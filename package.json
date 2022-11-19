@@ -10,7 +10,7 @@
     "build:dev:node": "cross-env NODE_ENV=development nodemon -q build/index.js",
     "build:dev:sass": "sass --watch src/scss/main.scss public/styles/main.css",
     "build:prod:sass": "sass src/scss/main.scss public/styles/main.css",
-    "lint": "eslint src/**/*.ts",
+    "lint": "eslint . --ext .ts",
     "format": "eslint src/**/*.ts --fix",
     "start": "npm run build && cross-env NODE_ENV=production node build/index.js",
     "start:dev": "concurrently \"npm run build:typescript:app\" \"npm run build:typescript:client\" \"npm run build:dev:node\" \"npm run build:dev:sass\""
