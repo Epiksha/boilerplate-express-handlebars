@@ -1,11 +1,14 @@
-import express, { Express, Request, Response } from 'express';
+import { Express, Request, Response } from "express";
 
-const router = express.Router();
-
-router.get('/', (request: Request, response: Response) => {
-  response.render('home');
-});
+const routes = [
+  { url: "/", template: "home" },
+  { url: "/styleguide", template: "styleguide" },
+]
 
 export default (app: Express) => {
-  app.get('/', router);
+  routes.forEach(route => {
+    app.get(route.url, (request: Request, response: Response) => {
+      response.render(route.template);
+    });
+  });
 };

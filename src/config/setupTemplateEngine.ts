@@ -1,15 +1,15 @@
-import { engine } from 'express-handlebars';
-import { Express } from 'express';
-import path from 'path';
+import { engine } from "express-handlebars";
+import { Express } from "express";
+import path from "path";
 
 export default (app: Express) => {
   app.engine(
-    'hbs',
+    "hbs",
     engine({
-      defaultLayout: 'main',
-      extname: '.hbs',
+      defaultLayout: "main",
+      extname: ".hbs",
     }),
   );
-  app.set('view engine', 'hbs');
-  app.set('views', path.join(__dirname, '../', 'views'));
+  app.set("view engine", "hbs");
+  app.set("views", path.join(__dirname, "../", "views"));
 };

@@ -1,8 +1,8 @@
-import express, { Express } from 'express';
+import express, { Express } from "express";
 
-import configureApp from './config';
-import router from './routes';
-import setupMiddleware from './middleware';
+import configureApp from "./config";
+import router from "./routes";
+import setupMiddleware from "./middleware";
 
 const app: Express = express();
 
