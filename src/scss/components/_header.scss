@@ -1,0 +1,13 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.header {
+  text-align: center;
+
+  padding: 1.5rem 2rem 2rem;
+  border-bottom: $divider;
+
+  &__title {
+    color: $color-primary;
+  }
+}

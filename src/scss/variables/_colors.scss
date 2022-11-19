@@ -1,0 +1,33 @@
+@use "sass:color";
+
+// Theme Colours
+$color-primary: #4A3277;
+$color-primary--dark: #342256;
+$color-primary--light: #956AFF;
+$color-secondary: #1B2130;
+$color-secondary--dark: #151925;
+$color-secondary--light: #2d364e;
+$color-tertiary: #9E005D;
+$color-tertiary--dark: #7b0148;
+$color-tertiary--light: #b1086b;
+
+// Semantic Colours
+$color-danger: #FF6252;
+$color-success: #157641;
+$color-caution: #FDAD15;
+
+// General Colours
+$color-black: #000000;
+$color-gray-1: #D3D3D3;
+$color-gray-2: #A5A5A5;
+$color-gray-3: #383838;
+$color-gray-4: #808080;
+$color-gray-5: #F9F9F9;
+$color-gray-6: #eaeaea;
+$color-white: #ffffff;
+$color-text: #272222;
+
+// Box Shadow
+$box-shadow-1: 0.2rem 0.2rem 1rem 0.2rem color.adjust($color-black, $alpha: -0.9);
+$box-shadow-2: 0 0.4rem 0.8rem 0 color.adjust($color-black, $alpha: -0.8);
+$box-shadow-3: 0 0.8rem 1.6rem 0 color.adjust($color-black, $alpha: -0.8);
