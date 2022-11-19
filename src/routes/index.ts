@@ -3,7 +3,7 @@ import { Express, Request, Response } from "express";
 const routes = [
   { url: "/", template: "home" },
   { url: "/styleguide", template: "styleguide" },
-]
+];
 
 export default (app: Express) => {
   routes.forEach(route => {
